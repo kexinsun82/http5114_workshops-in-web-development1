@@ -5,14 +5,18 @@ Hi👋, I'm ***Kexin Sun***. This is my second year in Toronto, and I started a 
 ![LinkedIn](https://img.icons8.com/?size=100&id=13930&format=png&color=000000)
 
 ### Education
-**Web Development - Front-end Design**  
+>**Web Development - Front-end Design**  
 
-_George Brown College - Postgraduate_ | September 2023 - August 2024 | Canada
+>>_George Brown College - Postgraduate_ | September 2023 - August 2024 | Canada
 
-**Visual Communication Design**  _Zhengzhou Technology and Business University - Bachelor's Degree_  September 2018 - July 2022  China
+>**Visual Communication Design**
+
+>>_Zhengzhou Technology and Business University - Bachelor's Degree_  September 2018 - July 2022  China
 
 ### Work Experience                         
-**Graphic Designer**  _Qingping Printing Company_  January 2022 - August 2023  China
+>**Graphic Designer**
+
+>>_Qingping Printing Company_  January 2022 - August 2023  China
  
 - Collaborated as a team to accomplish projects and meet customer needs. Produced over 10,000 pieces during this period. Timely communication with team members to leverage our strengths and utilize each team member's expertise to complete high-quality projects.
 - Finished 15+ project designs through CorelDRAW. Worked with the team and proofread to ensure dimensions were available for final product production.
