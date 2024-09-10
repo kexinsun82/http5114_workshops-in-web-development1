@@ -12,6 +12,9 @@ Files from the HTTP5114 course.
 
 ## Push update steps
 
-1. `git add .`
-2. `git commit -am "xxxmessagexxx"`
-3. `git push`
+```
+0. git status
+1. git add .
+2. git commit -am "xxxmessagexxx"
+3. git push
+```
