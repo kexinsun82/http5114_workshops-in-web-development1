@@ -1,10 +1,12 @@
 # Kexin Sun
-Hi, I'm ***Kexin Sun***. This is my second year in Toronto, and I started a new journey in **Web Development** at Humber College. I aspire to become a ***Front-end Developer*** and look forward to this exciting and fulfilling learning experience. I hope to overcome all challenges and achieve my goals, transforming from a Designer into a Web Developer!
+Hi👋, I'm ***Kexin Sun***. This is my second year in Toronto, and I started a new journey in **Web Development** at Humber College. I aspire to become a ***Front-end Developer*** and look forward to this exciting and fulfilling learning experience. I hope to overcome all challenges and achieve my goals, transforming from a Designer into a Web Developer😃!
 
 ## About Me
 
 ### Education
-**Web Development - Front-end Design**  _George Brown College - Postgraduate_  September 2023 - August 2024  Canada
+**Web Development - Front-end Design**  
+
+_George Brown College - Postgraduate_ | September 2023 - August 2024 | Canada
 
 **Visual Communication Design**  _Zhengzhou Technology and Business University - Bachelor's Degree_  September 2018 - July 2022  China
 
