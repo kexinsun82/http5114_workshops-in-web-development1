@@ -11,12 +11,12 @@ Hi👋, I'm ***Kexin Sun***. This is my second year in Toronto, and I started a 
 >
 >**Visual Communication Design**
 >
->>_Zhengzhou Technology and Business University - Bachelor's Degree_  September 2018 - July 2022  China
+>>_Zhengzhou Technology and Business University - Bachelor's Degree_ | September 2018 - July 2022 | China
 
 ### Work Experience                         
 >**Graphic Designer**
 >
->>_Qingping Printing Company_  January 2022 - August 2023  China
+>>_Qingping Printing Company_ | January 2022 - August 2023 | China
 > 
 >- Collaborated as a team to accomplish projects and meet customer needs. Produced over 10,000 pieces during this period. Timely communication with team members to leverage our strengths and utilize each team member's expertise to complete high-quality projects.
 >- Finished 15+ project designs through CorelDRAW. Worked with the team and proofread to ensure dimensions were available for final product production.
