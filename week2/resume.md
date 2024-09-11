@@ -1,6 +1,0 @@
-# Kexin Sun
-
-## About Me
-
-
-
