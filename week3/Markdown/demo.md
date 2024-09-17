@@ -55,3 +55,7 @@ Tables
 | JavaScript    | 7      |
 | CSS           | 9      |
 
+## GitHub flavour
+
+> [!Note]  
+> This is a note!
