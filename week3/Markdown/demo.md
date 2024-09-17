@@ -27,3 +27,9 @@ This is an unordered list:
 ## Links
 
 This is a link to [my portfolio](https://github.com/kexinsun82).
+
+## Images
+
+This is an image.
+
+![Image1](image1.jpeg)
