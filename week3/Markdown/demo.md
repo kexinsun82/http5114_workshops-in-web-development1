@@ -33,3 +33,17 @@ This is a link to [my portfolio](https://github.com/kexinsun82).
 This is an image.
 
 ![Image1](image1.jpeg)
+
+## Code
+
+We can put inline code by using a tic.
+
+To add an image use an `<img>` tag.
+
+You can add multi line code by using three tics and the name of the coding language:
+
+```
+function test() {
+  console.log("test");
+}
+```s
