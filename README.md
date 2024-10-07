@@ -10,7 +10,7 @@ This course will allow students to access additional support for content deliver
 
 ## Assignments Repo
 After all assignments are graded, I will change the repository to public.  
-[Workshops in Web Development 1 - Assignments Repo](https://github.com/kexinsun82/humber-assignments/tree/f9266c6ae11bc0c4786520275496e935f08af61d/2-workshops%20in%20web%20development1%20HTTP5114)
+[Assignments Repo](https://github.com/kexinsun82/humber-assignments.git)
 
 ## Outcomes
 - Troubleshoot their progress during the past week.
