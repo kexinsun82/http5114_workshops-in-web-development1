@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Monty Hall Problem</title>
+  </head>
+  <body>
+    <h1>The Monty Hall Problem</h1>
+
+    <script>
+      var switchCounter = 0;
+      var stayCounter = 0;
+
+      for (var i = 0; i < 10000; i++) {
+        // Randomly place a car in a door 1, 2, or 3
+        // let car = Math.floor(Math.random() * 3) + 1;
+        var car = Math.ceil(Math.random() * 3);
+        document.write("<p>The car is in door number " + car + "</p>");
+
+        // Randomly choose a door 1, 2, or 3
+        var choice = Math.ceil(Math.random() * 3);
+        document.write(
+          "<p>The contestant chose door number " + choice + "</p>"
+        );
+
+        // Randomly choose a door 1, 2, or 3
+        // var remove = Math.ceil(Math.random() * 3);
+
+        // Check the removed door, make sure it's not the same as choice
+        // or remove
+        /*
+        while (remove === car || remove === choice) {
+            remove = Math.ceil(Math.random() * 3);
+        }
+        */
+
+        do {
+          var remove = Math.ceil(Math.random() * 3);
+        } while (remove === car || remove === choice);
+
+        document.write("<p>The host removes door number " + remove + "</p>");
+
+        // What was the right choice
+        if (choice === car) {
+          stayCounter++;
+          document.write(
+            "<p style='color:red;'>The contestant should STAY</p>"
+          );
+        } else {
+          switchCounter++;
+          document.write(
+            "<p style='color:green;'>The contestant should SWTICH</p>"
+          );
+        }
+      }
+
+      document.write(
+        "<h2 style='color:red;'>Stay was correct " + stayCounter + " times</h2>"
+      );
+      document.write(
+        "<h2 style='color:green;'>Switch was correct " +
+          switchCounter +
+          " times</h2>"
+      );
+
+      var percent = Math.round((switchCounter / 10000) * 10000) / 100;
+      document.write(
+        "<h1>SWITCH was correct " + percent + "% of the time</h1>"
+      );
+    </script>
+  </body>
+</html>
