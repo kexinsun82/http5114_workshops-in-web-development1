@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monty Hall Problem Simulation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        text-align: center;
+      }
+      .results {
+        margin-top: 20px;
+      }
+      .summary {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      .detail {
+        text-align: left;
+        margin-top: 20px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+      }
+      .highlight {
+        color: green;
+        font-weight: bold;
+      }
+      .highlight-stay {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Monty Hall Problem</h1>
+    <p>Simulating the Monty Hall problem to analyze the probabilities of switching or staying.</p>
+
+    <div id="results" class="results"></div>
+    <div id="details" class="detail"></div>
+
+    <script>
+      // Function to simulate the Monty Hall problem
+      function simulateMontyHall(iterations) {
+        let switchCounter = 0;
+        let stayCounter = 0;
+        let detailOutput = "";
+
+        for (let i = 0; i < iterations; i++) {
+          // Randomly place a car behind one of the doors
+          const car = Math.ceil(Math.random() * 3);
+
+          // Contestant randomly picks a door
+          const choice = Math.ceil(Math.random() * 3);
+
+          // Host removes a door that's not the car and not the choice
+          let remove;
+          do {
+            remove = Math.ceil(Math.random() * 3);
+          } while (remove === car || remove === choice);
+
+          // Check if the contestant's initial choice was correct
+          if (choice === car) {
+            stayCounter++;
+            if (i < 10) {
+              detailOutput += `
+                <p>
+                  Simulation ${i + 1}: Car is behind door <strong>${car}</strong>, 
+                  contestant chose <strong>${choice}</strong>, 
+                  host removed <strong>${remove}</strong> → 
+                  <span class="highlight-stay">Stay is correct</span>.
+                </p>`;
+            }
+          } else {
+            switchCounter++;
+            if (i < 10) {
+              detailOutput += `
+                <p>
+                  Simulation ${i + 1}: Car is behind door <strong>${car}</strong>, 
+                  contestant chose <strong>${choice}</strong>, 
+                  host removed <strong>${remove}</strong> → 
+                  <span class="highlight">Switch is correct</span>.
+                </p>`;
+            }
+          }
+        }
+
+        // Calculate probabilities
+        const switchPercentage = ((switchCounter / iterations) * 100).toFixed(2);
+        const stayPercentage = ((stayCounter / iterations) * 100).toFixed(2);
+
+        // Display summary results
+        const resultsDiv = document.getElementById("results");
+        resultsDiv.innerHTML = `
+          <div>
+            <h2>Total Simulations: ${iterations}</h2>
+            <p class="summary">Switch was correct <span class="highlight">${switchCounter}</span> times (${switchPercentage}%).</p>
+            <p class="summary">Stay was correct <span class="highlight-stay">${stayCounter}</span> times (${stayPercentage}%).</p>
+          </div>
+        `;
+
+        // Display simulation details for the first 10 iterations
+        const detailsDiv = document.getElementById("details");
+        detailsDiv.innerHTML = `
+          <h3>Details of the first 10 simulations:</h3>
+          ${detailOutput}
+        `;
+      }
+
+      // Run the simulation with 10,000 iterations
+      simulateMontyHall(10000);
+    </script>
+  </body>
+</html>

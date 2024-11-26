@@ -13,7 +13,7 @@
       var switchCounter = 0;
       var stayCounter = 0;
 
-      for (var i = 0; i < 10000; i++) {
+      for (var i = 0; i < 1000; i++) {
         // Randomly place a car in a door 1, 2, or 3
         // let car = Math.floor(Math.random() * 3) + 1;
         var car = Math.ceil(Math.random() * 3);
@@ -65,7 +65,7 @@
           " times</h2>"
       );
 
-      var percent = Math.round((switchCounter / 10000) * 10000) / 100;
+      var percent = Math.round((switchCounter / 1000) * 100);
       document.write(
         "<h1>SWITCH was correct " + percent + "% of the time</h1>"
       );
