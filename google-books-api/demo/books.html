@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Books API</title>
+</head>
+<body>
+  <h1>Google Books API</h1>
+
+  <ul id="bookList"></ul>
+
+  <script>
+    var bookList = document.getElementById("bookList");
+    var key = "AIzaSyD0F0G5UpiDuCjUMsDQ-pZLwY-eDs5vjQ4";
+    var url = "https://www.googleapis.com/books/v1/volumes?q=hunger&key=";
+
+    fetch(url + key)
+      .then(function(response) {
+        // console.log(response);
+        return response.json();
+      })
+      .then(function(data) {
+        console.log(data);
+
+        data.items.forEach(function(item) {
+
+          var title = item.volumeInfo.title;
+          var author = item.volumeInfo.authors[0];
+          var link = item.volumeInfo.canonicalVolumeLink;
+
+          if(item.volumeInfo.hasOwnProperty("imageLinks"))
+          {
+            var image = item.volumeInfo.imageLinks.smallThumbnail;
+          }
+          
+          var newItem = 
+            "<li><h2>" +
+            title + 
+            "</h2>" + 
+            author + 
+            "<br>" + 
+            "<a href='"+ 
+            link + 
+            "'>" + 
+            link + 
+            "</a><br>";
+
+            // If there is an Image, add it to the li
+            if (item.volumeInfo.hasOwnProperty("imageLinks")) {
+              newItem += "<img src='" + image + "'>";
+            }
+
+            // Clode the li
+            newItem += "</li>";
+            
+            // Add the li HTML to the ul
+            bookList.innerHTML += newItem;
+        });
+    });
+  </script>
+</body>
+</html>
+

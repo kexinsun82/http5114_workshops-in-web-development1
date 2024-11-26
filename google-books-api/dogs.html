@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dog API</title>
+</head>
+<body>
+  <h1>Random Dog Image</h1>
+  <h2 id="dogBreed">Breed: </h2>
+  <button id="fetchDog">Fetch Dog Image</button>
+  <br>
+  <br>
+
+  <img id="dogImage" src="" alt="Dog" style="max-width: 100%; height: auto;">
+
+  <script>
+    // Function to extract breed from image URL
+    function extractBreedFromUrl(imageUrl) {
+      var parts = imageUrl.split('/');
+      var breedIndex = parts.indexOf('breeds') + 1; // "breeds" is followed by the breed name
+      var breed = parts[breedIndex];
+      return breed.replace(/-/g, ' '); // Replace dashes with spaces if it's a sub-breed
+    }
+
+    var url = "https://dog.ceo/api/breed/hound/images/random";
+    var button = document.getElementById("fetchDog");
+    var image = document.getElementById("dogImage");
+    var breed = document.getElementById("dogBreed");
+
+    button.addEventListener('click', function() {
+      fetch(url)
+      .then(response => response.json())
+        .then(data => {
+          const imageUrl = data.message;
+          const breed = extractBreedFromUrl(imageUrl);
+          document.getElementById("dogImage").src = imageUrl;
+          document.getElementById("dogBreed").textContent = `Breed: ${breed}`;
+        })
+        .catch(error => console.error('Error fetching dog image:', error));
+    });
+  </script>
+</body>
+</html>
+
